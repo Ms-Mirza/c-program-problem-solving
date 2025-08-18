@@ -1,0 +1,91 @@
+# Sorting in C Programming – Detailed Concept
+
+## 1. What is Sorting?
+
+Sorting is the process of arranging elements of an array or list in a specific order:
+
+* **Ascending**: Smallest to Largest (e.g., 1, 2, 3, 4)
+* **Descending**: Largest to Smallest (e.g., 9, 8, 7, 6)
+
+In C, sorting is usually implemented using algorithms since there is no built-in sort function (except `qsort()` in `<stdlib.h>`).
+
+---
+
+## 2. Why Sorting is Important
+
+* Makes searching faster (e.g., Binary Search needs sorted data)
+* Organizes data for easier reading
+* Prepares data for further processing or analysis
+
+---
+
+## 3. Categories of Sorting Algorithms
+
+### A. Simple Sorting (O(n²))
+
+Best for small datasets, easier to implement but slower for large data.
+
+#### 1. **Bubble Sort**
+
+* Compares adjacent elements and swaps them if they are in the wrong order.
+* Largest elements gradually "bubble" to the end.
+
+#### 2. **Selection Sort**
+
+* Finds the smallest element in the unsorted part and swaps it with the first unsorted element.
+* Repeats until the entire array is sorted.
+
+#### 3. **Insertion Sort**
+
+* Assumes the first element is sorted.
+* Inserts each new element into its correct position within the sorted part.
+
+---
+
+### B. Efficient Sorting (O(n log n))
+
+Faster for large datasets, more complex to implement.
+
+#### 1. **Merge Sort**
+
+* Uses Divide and Conquer.
+* Splits array into halves, sorts each half, then merges them.
+
+#### 2. **Quick Sort**
+
+* Selects a pivot element.
+* Places smaller elements before the pivot and larger elements after.
+* Recursively sorts subarrays.
+
+#### 3. **Heap Sort**
+
+* Builds a heap data structure.
+* Repeatedly extracts the largest (or smallest) element and rebuilds the heap until sorted.
+
+---
+
+## 4. Sorting in C – Two Approaches
+
+1. **Manual**: Implement algorithms like Bubble, Merge, Quick Sort.
+2. **Built-in**: Use qsort() from <stdlib.h> for quick implementation.
+
+---
+
+## 5. Algorithm Comparison Table
+
+| Algorithm      | Best Case  | Worst Case | Space Complexity | Notes                       |
+| -------------- | ---------- | ---------- | ---------------- | --------------------------- |
+| Bubble Sort    | O(n)       | O(n²)      | O(1)             | Simple, slow for large data |
+| Selection Sort | O(n²)      | O(n²)      | O(1)             | Few swaps, always slow      |
+| Insertion Sort | O(n)       | O(n²)      | O(1)             | Fast for nearly sorted data |
+| Merge Sort     | O(n log n) | O(n log n) | O(n)             | Stable, needs extra space   |
+| Quick Sort     | O(n log n) | O(n²)      | O(log n)         | Fast in practice, in-place  |
+| Heap Sort      | O(n log n) | O(n log n) | O(1)             | No extra space, always fast |
+
+---
+
+## 6. General Steps of Sorting
+
+1. Compare elements.
+2. Swap, insert, or merge them into correct position.
+3. Repeat until all elements are in order.
