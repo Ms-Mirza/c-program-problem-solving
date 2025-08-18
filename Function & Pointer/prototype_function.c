@@ -1,10 +1,10 @@
 // important note: When calling a functions, that function must be defined above the place where it is called. but if called-function(child function) is below the function(parent function) then to avoid the error we use prototype function....
 
 #include<stdio.h>
-
+void bangladesh(); // global prototype of function.
 int main() //parent function
 {
-    void bangladesh(); // prototype function.
+    //void bangladesh(); //local prototype function.
     bangladesh();
     return 0;
 }
