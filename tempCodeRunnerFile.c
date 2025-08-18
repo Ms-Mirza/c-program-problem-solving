@@ -1,19 +1,21 @@
-// Here i test the C-program code.
 #include <stdio.h>
-int main ()
-{
-    int n;
-    printf("Enter the size of the array: ");
-    scanf("%d", &n);
-    int arr[n];
-    for (int i=1; i<=n; i++)
-    {
-        printf("Enter the marks for roll %d : ", i);
-        scanf("%d", &arr[i]); 
-    }
-    for (int i=1; i<=n; i++){
-        if (arr[i]<35){
-            printf("Roll %d has failed with marks %d\n", i, arr[i]);
+int main() {
+    char str1[100], str2[100];
+    int i = 0, flag = 0;
+    printf("Enter first string: ");
+    gets(str1);
+    printf("Enter second string: ");
+    gets(str2);
+    while (str1[i] != '\0' || str2[i] != '\0') {
+        if (str1[i] != str2[i]) {
+            flag = 1;
+            break;
         }
+        i++;
     }
+    if (flag == 0)
+        printf("Strings are equal.\n");
+    else
+        printf("Strings are not equal.\n");
+    return 0;
 }
