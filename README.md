@@ -1,1 +1,1 @@
-All C-program problems and their solves
+C-programming concept and problem solving
