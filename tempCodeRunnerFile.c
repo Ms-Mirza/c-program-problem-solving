@@ -18,6 +18,10 @@ int main() {
     else
         printf("Strings are not equal.\n");
         printf("Strings are not equal.\n");
+        printf("Strings are not equal.\n");
+
 
     return 0;
 }
+
+
